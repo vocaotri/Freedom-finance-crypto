@@ -5,10 +5,13 @@
                 <a href="{{ route('home') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
             <li>
-                <a href="{{route('crypto.index')}}"><i class="fa fa-table fa-fw"></i> Crypto manager</a>
+                <a href="{{route('crypto.index')}}"><i class="fa fa-table fa-fw"></i> Crypto manage</a>
             </li>
             <li>
-                <a href="{{route('transaction.index')}}"><i class="fa fa-table fa-fw"></i> Transaction manager</a>
+                <a href="{{route('transaction.index')}}"><i class="fa fa-table fa-fw"></i> Transaction manage</a>
+            </li>
+            <li>
+                <a href="{{route('transaction.index')}}"><i class="fa fa-table fa-fw"></i> Key manage</a>
             </li>
         </ul>
         <!-- /#side-menu -->

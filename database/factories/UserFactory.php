@@ -25,6 +25,7 @@ class UserFactory extends Factory
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'role' => $this->faker->randomElement([Role::User, Role::Admin]),
             'code_activate' => $this->faker->optional()->text(5),
+            'db_url' => $this->faker->optional()->text(5),
             'remember_token' => Str::random(10),
         ];
     }

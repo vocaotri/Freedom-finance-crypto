@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KeyController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,11 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::middleware('is_user')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/about', [HomeController::class, 'about'])->name('about');
+    Route::controller(KeyController::class)->name('key.')->group(function () {
+        Route::post('/generate-private-key', 'generatePrivateKey')->name('generate.key');
+        Route::post('/update-db-url', 'updateDBURL')->name('update.db.url');
+    });
     Route::controller(CryptoController::class)->name('crypto.')->group(function () {
         Route::get('/crypto', 'index')->name('index');
         Route::match(['get','post'],'/crypto-add', 'add')->name('add');

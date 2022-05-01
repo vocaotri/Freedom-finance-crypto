@@ -22,7 +22,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'code_activate',
+        'db_url',
     ];
 
     /**
@@ -52,5 +54,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'role' => Role::class,
+        'db_url'=> 'encrypted',
     ];
 }

@@ -45,7 +45,7 @@ return [
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_URI', 'mongodb+srv://username:password@<atlas-cluster-uri>/myappdb?retryWrites=true&w=majority'),
-            'database' => env('DB_DATABASE','myappdb'),
+            'database' => env('DB_DATABASE','freedom-finance'),
         ],
 
         'mysql' => [
